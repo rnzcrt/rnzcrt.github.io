@@ -1,225 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ranz Cuarto | BS Computer Science Student</title>
-<meta name="description" content="Portfolio of Ranz Emmanuel G. Cuarto, BS Computer Science student at Holy Angel University, seeking an OJT in IT Support or QA Testing.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#08080a;--fg:#f3f1ea;--muted:#807f78;--line:rgba(243,241,234,.1);--line2:rgba(243,241,234,.22);--accent:#ff3b1d;--gutter:2.5rem;--section:9rem;--d:"Anton",Impact,sans-serif;--s:"Onest",system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
-*{margin:0;padding:0;box-sizing:border-box}
-html{font-size:16px;background:var(--bg);scroll-behavior:smooth}
-@media(max-width:1920px){html{font-size:.833333vw}}
-@media(max-width:1440px){html{font-size:1.111111vw}}
-@media(max-width:1024px){html{font-size:1.5625vw}}
-@media(max-width:640px){html{font-size:4.444444vw;--gutter:16px}}
-body{background:var(--bg);color:var(--fg);font-family:var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--accent);color:var(--bg)}
-a{color:inherit;text-decoration:none}ul{list-style:none}
-img{display:block;max-width:100%}
-.eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.8125rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
-.eyebrow:before{content:"";width:.5rem;height:.5rem;border-radius:9999px;background:var(--accent)}
-.d{font-family:var(--d);text-transform:uppercase;letter-spacing:-.01em;font-weight:400}
-.pad{padding:var(--section) var(--gutter)}
-h2.d{font-size:3.25rem;line-height:1;margin-top:1.5rem}
-@media(min-width:640px){h2.d{font-size:5rem;line-height:.95}}
-/* nav */
-header{position:fixed;inset:0 0 auto;z-index:50;pointer-events:none}
-nav{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;padding:1.5rem var(--gutter)}
-.logo{display:flex;align-items:center;gap:.75rem}
-.mono{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:9999px;border:1px solid var(--line2);font-weight:600;font-size:.8rem}
-.logo span:last-child{display:none;font-size:.8125rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
-nav ul{display:none;gap:2.5rem}
-nav ul a{position:relative;font-size:.8125rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);transition:color .3s}
-nav ul a:after{content:"";position:absolute;left:0;bottom:-.25rem;height:1px;width:0;background:var(--accent);transition:width .3s}
-nav ul a:hover{color:var(--fg)}nav ul a:hover:after{width:100%}
-@media(min-width:640px){.logo span:last-child{display:block}}
-@media(min-width:768px){nav ul{display:flex}}
-/* hero */
-#top{position:relative;display:flex;flex-direction:column;min-height:100svh;overflow:hidden}
-.hero-top{position:relative;z-index:3;display:flex;flex-direction:column;gap:2rem;padding:7rem var(--gutter) 0}
-@media(min-width:640px){.hero-top{flex-direction:row;justify-content:space-between;align-items:flex-start;padding-top:8rem}}
-.roles{font-size:1.75rem;line-height:1.05}
-@media(min-width:640px){.roles{font-size:3.25rem}}
-.roles span{display:block;overflow:hidden}
-.roles i{display:block;font-style:normal;transform:translateY(110%);opacity:0;animation:up .76s var(--ease) forwards}
-.hero-p{max-width:26rem;font-size:1.0625rem;line-height:1.6;color:var(--muted);opacity:0;transform:translateY(16px);animation:fade .52s var(--ease) 1s forwards}
-@media(min-width:640px){.hero-p{text-align:right}}
-.name{position:absolute;inset:auto 0 0;z-index:1;transform:translateY(6%);display:flex;flex-direction:column;align-items:center;color:var(--accent);font-size:min(13rem,31vw);line-height:.78}
-@media(min-width:640px){.name{font-size:min(28rem,33vw)}}
-.name span{display:block;white-space:nowrap;overflow:hidden;padding-top:.05em}
-.name b{display:inline-block;font-weight:400;transform:translateY(100%);opacity:0;animation:up .9s var(--ease) forwards}
-.fade{position:absolute;inset:auto 0 0;z-index:2;height:26vh;background:linear-gradient(transparent,var(--bg))}
-.cue{position:absolute;z-index:4;bottom:2rem;left:var(--gutter);display:flex;align-items:center;gap:.75rem;font-size:.8125rem;text-transform:uppercase;letter-spacing:.22em;color:var(--muted);opacity:0;animation:fade .6s ease 1.5s forwards}
-.cue:before{content:"";width:2.5rem;height:1px;background:var(--accent)}
-@keyframes up{to{transform:none;opacity:1}}
-@keyframes fade{to{opacity:1;transform:none}}
-/* marquee */
-.marquee{overflow:hidden;border-block:1px solid var(--line);padding:2rem 0}
-.track{display:flex;width:max-content;animation:mq 22s linear infinite}
-.track span{display:flex;align-items:center;font-family:var(--d);font-size:3.25rem;text-transform:uppercase;letter-spacing:-.01em;white-space:nowrap}
-.track span:after{content:"";margin-inline:2rem;width:.625rem;height:.625rem;border-radius:9999px;background:var(--accent)}
-@keyframes mq{to{transform:translateX(-50%)}}
-/* reveal */
-.rv{opacity:0;transform:translateY(40px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--dl,0ms)}
-.rv.in{opacity:1;transform:none}
-/* story */
-.grid{display:grid;gap:3rem var(--gutter)}
-@media(min-width:1024px){.grid{grid-template-columns:repeat(12,1fr)}.grid>:first-child{grid-column:span 6}.grid>:last-child{grid-column:span 6;padding-top:.5rem}}
-.lead{margin-top:2rem;max-width:46ch;font-size:1.375rem;line-height:1.45;color:var(--muted)}
-.pr li{display:grid;grid-template-columns:auto 1fr;column-gap:1.5rem;border-top:1px solid var(--line);padding:2rem 0}
-.pr li:last-child{border-bottom:1px solid var(--line)}
-.pr b{font-size:1.75rem;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
-.pr h3{font-size:1.75rem;font-weight:600;letter-spacing:-.01em;line-height:1.15}
-.pr p{margin-top:.75rem;max-width:44ch;font-size:1.0625rem;line-height:1.6;color:var(--muted)}
-/* projects */
-.head{display:flex;flex-direction:column;gap:1rem}
-@media(min-width:640px){.head{flex-direction:row;align-items:flex-end;justify-content:space-between}}
-.small{font-size:.8125rem;text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
-.cards{margin-top:4rem;display:grid;gap:4rem var(--gutter)}
-@media(min-width:768px){.cards{grid-template-columns:1fr 1fr}.cards>li:nth-child(even){margin-top:6rem}}
-.art{display:block;aspect-ratio:16/11;border-radius:.125rem;background:radial-gradient(130% 130% at 30% 15%,#17171b,var(--bg));border:1px solid var(--line);position:relative;overflow:hidden;transition:border-color .4s}
-.art em{position:absolute;left:1.5rem;top:1rem;font-family:var(--d);font-style:normal;font-size:7.5rem;line-height:1;color:rgba(243,241,234,.06)}
-.art strong{position:absolute;left:1.5rem;bottom:1.25rem;right:1.5rem;font-weight:500;font-size:.8125rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
-.card:hover .art{border-color:var(--accent)}
-.row{margin-top:1.5rem;border-top:1px solid var(--line);padding-top:1.25rem;display:flex;justify-content:space-between;gap:1.5rem}
-.card h3{font-size:1.75rem;font-weight:600;letter-spacing:-.01em;line-height:1.15;transition:color .34s}
-.card:hover h3{color:var(--accent)}
-.card p{margin-top:.5rem;max-width:42ch;font-size:1.0625rem;line-height:1.6;color:var(--muted)}
-.card p.role{color:var(--fg);font-size:.95rem}
-.type{text-align:right;flex-shrink:0;font-size:.8125rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
-.type div{margin-top:.5rem;font-weight:500;color:var(--accent)}
-.links{margin-top:.75rem;display:flex;flex-wrap:wrap;gap:1.25rem;font-size:.8125rem;text-transform:uppercase;letter-spacing:.18em}
-.links a{color:var(--fg);border-bottom:1px solid var(--accent);padding-bottom:2px}
-.links a:hover{color:var(--accent)}
-/* numbers */
-dl{margin-top:4rem;display:grid;border-top:1px solid var(--line)}
-@media(min-width:640px){dl{grid-template-columns:1fr 1fr}}
-@media(min-width:1024px){dl{grid-template-columns:repeat(4,1fr)}}
-dl>div{display:flex;flex-direction:column;gap:1rem;border-bottom:1px solid var(--line);padding:2.5rem 0}
-@media(min-width:640px){dl>div:nth-child(even){border-left:1px solid var(--line);padding-left:2rem}}
-@media(min-width:1024px){dl>div{border-left:1px solid var(--line);padding-left:2rem}dl>div:first-child{border-left:0;padding-left:0}}
-dd{order:-1;font-family:var(--d);font-size:7.5rem;line-height:.9;transition:color .34s}
-dl>div:hover dd{color:var(--accent)}
-dt{max-width:20ch;font-size:1.0625rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
-.certs{margin-top:4rem;display:grid;gap:1.5rem}
-@media(min-width:768px){.certs{grid-template-columns:repeat(4,1fr)}}
-.certs div{border-top:1px solid var(--line);padding-top:1.25rem;font-size:1.0625rem;line-height:1.6;color:var(--muted)}
-.certs h4{font-size:.8125rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);margin-bottom:.5rem}
-.note{margin-top:4rem;max-width:62ch;font-size:1.0625rem;line-height:1.6;color:var(--muted)}
-.note a{color:var(--fg);border-bottom:1px solid var(--accent)}
-/* contact */
-footer{padding:var(--section) var(--gutter) 0}
-footer h2.d{max-width:18ch}
-.mail{display:inline-flex;align-items:baseline;gap:.75rem;margin-top:3rem;font-size:1.75rem;font-weight:600;letter-spacing:-.01em;word-break:break-all;transition:transform .34s ease-out,color .34s}
-@media(min-width:640px){.mail{font-size:5rem;gap:1rem}}
-.mail:hover{transform:translateX(14px);color:var(--accent)}
-.mail i{font-style:normal;color:var(--accent)}
-.bar{margin-top:var(--section);border-top:1px solid var(--line);padding:3rem 0;display:grid;gap:2.5rem}
-@media(min-width:1024px){.bar{grid-template-columns:6fr 3fr 3fr}.bar>:last-child{text-align:right}}
-.bar .d{font-size:3.25rem;line-height:1}
-.bar ul{display:grid;gap:.75rem}
-.bar ul a{display:inline-flex;align-items:center;font-size:1.0625rem;color:var(--muted);transition:color .3s}
-.bar ul a:before{content:"";height:1px;width:0;background:var(--accent);margin-right:0;transition:width .3s,margin .3s}
-.bar ul a:hover{color:var(--fg)}.bar ul a:hover:before{width:1.5rem;margin-right:.75rem}
-@media(prefers-reduced-motion:reduce){.track{animation:none}.rv,.roles i,.hero-p,.name b,.cue{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}html{scroll-behavior:auto}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ranz Cuarto — Computer Science student interested in IT Support and QA Testing." />
+  <title>Ranz Cuarto — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f7f7f2;--surface:#fff;--ink:#20231f;--muted:#6c716a;--line:#e2e5dc;--accent:#376b55;--accent-soft:#e6eee7;--max:1160px;--gutter:clamp(20px,5vw,72px);--radius:18px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}::selection{background:#cfe1d3;color:var(--ink)}
+    .wrap{width:min(var(--max),calc(100% - var(--gutter)*2));margin-inline:auto}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--accent);font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+    h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.045em}h2{font-size:clamp(2rem,4.4vw,3.7rem);line-height:1.05;margin:14px 0 18px}p{color:var(--muted)}.section{padding:clamp(72px,10vw,128px) 0}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,247,242,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,229,220,.8)}nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.04em;display:flex;align-items:center;gap:10px}.brand-mark{display:grid;place-items:center;width:36px;height:36px;background:var(--accent);color:white;border-radius:50%;font-size:.8rem;letter-spacing:0}.nav-links{display:flex;gap:clamp(16px,3vw,34px);align-items:center}.nav-links a{font-size:.88rem;color:var(--muted);transition:color .2s}.nav-links a:hover{color:var(--accent)}.nav-cta{border:1px solid var(--line);padding:9px 14px;border-radius:999px!important;color:var(--ink)!important}
+    .hero{padding:clamp(68px,10vw,130px) 0 76px;min-height:72vh;display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:end;gap:clamp(30px,7vw,100px)}.hero h1{font-size:clamp(4rem,10vw,8.5rem);line-height:.88;margin:24px 0 28px;font-weight:600}.hero h1 span{color:var(--accent)}.hero-copy{max-width:410px;font-size:1.05rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:999px;font-size:.9rem;font-weight:700;border:1px solid var(--line);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--accent);color:white;border-color:var(--accent)}.btn-secondary{background:transparent}.hero-note{border-left:2px solid var(--accent);padding:5px 0 5px 20px;max-width:300px;margin:0 0 10px auto}.hero-note strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.1rem}.hero-note p{font-size:.9rem;margin:7px 0 0}.scroll-line{margin-top:54px;color:var(--muted);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:12px}.scroll-line:before{content:"";width:34px;height:1px;background:var(--accent)}
+    .ticker{overflow:hidden;background:var(--accent-soft);border-block:1px solid #d8e4d9;padding:15px 0}.ticker-track{display:flex;gap:30px;width:max-content;animation:move 35s linear infinite}.ticker span{font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}.ticker span:after{content:'✳';margin-left:30px;color:var(--accent)}@keyframes move{to{transform:translateX(-50%)}}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,8vw,110px)}.about-copy{font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.55;color:var(--ink);max-width:660px}.principles{border-top:1px solid var(--line)}.principle{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}.principle-num{color:var(--accent);font-size:.85rem;font-weight:700}.principle h3{font-size:1.1rem;margin:0 0 5px;letter-spacing:-.025em}.principle p{font-size:.92rem;margin:0}
+    .projects-head{display:flex;justify-content:space-between;align-items:end;gap:24px}.projects-head p{max-width:330px;margin-bottom:20px;font-size:.95rem}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:38px}.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .25s,border-color .25s}.project:hover{transform:translateY(-4px);border-color:#bdcfc0}.project-visual{height:230px;padding:22px;position:relative;overflow:hidden;background:#e9eee7;display:flex;align-items:center;justify-content:center}.project:nth-child(2) .project-visual{background:#f1e9dc}.project:nth-child(3) .project-visual{background:#e8edf4}.project:nth-child(4) .project-visual{background:#eee8f1}.visual-window{width:88%;height:83%;background:rgba(255,255,255,.82);border:1px solid rgba(32,35,31,.1);border-radius:10px;box-shadow:0 12px 35px rgba(35,45,35,.08);padding:14px;transform:rotate(-2deg)}.project:nth-child(even) .visual-window{transform:rotate(2deg)}.window-dots{display:flex;gap:4px;margin-bottom:15px}.window-dots i{width:5px;height:5px;border-radius:50%;background:#c2c8be}.mock-title{height:9px;width:45%;border-radius:8px;background:#aab8ab;margin-bottom:9px}.mock-line{height:5px;width:78%;border-radius:8px;background:#e0e5dd;margin-bottom:6px}.mock-line.short{width:52%}.mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}.mock-cards i{display:block;height:50px;background:#e8eee7;border-radius:5px}.project:nth-child(2) .mock-cards i{background:#efe3d3}.project:nth-child(3) .mock-cards i{background:#dce5f0}.project:nth-child(4) .mock-cards i{background:#e8dfee}.visual-label{position:absolute;left:22px;bottom:16px;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:#526354}.project-body{padding:24px}.project-meta{display:flex;justify-content:space-between;gap:14px;align-items:center;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}.project h3{font-size:1.55rem;margin:14px 0 8px}.project p{font-size:.94rem;margin-bottom:16px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.tag{font-size:.74rem;padding:5px 9px;border-radius:999px;background:#f0f2ed;color:#515950}.project-links{display:flex;gap:16px;margin-top:20px}.project-links a{font-size:.82rem;font-weight:700;color:var(--accent);border-bottom:1px solid #b8cdbd;padding-bottom:2px}
+    .skills-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,8vw,110px)}.skill-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.skill-group{background:var(--surface);border:1px solid var(--line);padding:22px;border-radius:14px}.skill-group h3{font-size:1rem;letter-spacing:-.02em;margin-bottom:12px}.skill-group p{font-size:.9rem;line-height:1.9;margin:0}.education{display:grid;grid-template-columns:1fr 1fr;gap:32px}.edu-card{padding:26px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}.edu-card h3{font-size:1.2rem;margin:12px 0 6px}.edu-card .sub{font-size:.85rem;color:var(--accent);font-weight:700}.cert-list{list-style:none;padding:0;margin:18px 0 0}.cert-list li{border-top:1px solid var(--line);padding:12px 0;font-size:.9rem;color:var(--muted)}
+    .contact{background:#e8eee7;padding:clamp(68px,9vw,110px) 0 0}.contact-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}.contact h2{font-size:clamp(2.8rem,7vw,6.3rem);max-width:760px}.contact p{max-width:500px}.contact-email{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.05rem,2.3vw,1.5rem);font-weight:600;color:var(--accent);border-bottom:1px solid #9eb7a4;padding-bottom:5px;white-space:nowrap}.footer{margin-top:80px;border-top:1px solid #d2ddd2;padding:22px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.82rem}.footer-links{display:flex;gap:18px}.footer a:hover{color:var(--accent)}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+    @media(max-width:760px){.nav-links{gap:13px}.nav-links a{font-size:.8rem}.nav-links a:nth-child(2){display:none}.hero{min-height:auto}.hero-grid,.about-grid,.skills-layout{grid-template-columns:1fr}.hero-note{margin:22px 0 0;max-width:400px}.hero h1{font-size:clamp(4.2rem,17vw,7rem)}.project-grid{gap:14px}.project-visual{height:180px}.project-body{padding:18px}.projects-head{display:block}.projects-head p{margin:0}.education{gap:14px}.edu-card{padding:20px}.contact-grid{grid-template-columns:1fr}.contact-email{justify-self:start}.footer{margin-top:56px}}
+    @media(max-width:520px){.brand-name{display:none}.nav-links a:nth-child(1){display:none}.nav-cta{padding:8px 12px}.project-grid,.skill-groups,.education{grid-template-columns:1fr}.project-visual{height:210px}.project h3{font-size:1.4rem}.hero-actions .btn{width:100%}.contact h2{font-size:3.1rem}.footer{display:grid}.hero{padding-top:64px}}
+  </style>
 </head>
 <body>
-<header><nav>
-<a class="logo" href="#top"><span class="mono">RC</span><span>Ranz Cuarto</span></a>
-<ul><li><a href="#story">Approach</a></li><li><a href="#projects">Projects</a></li><li><a href="#numbers">Numbers</a></li><li><a href="#contact">Contact</a></li></ul>
-</nav></header>
+  <header><nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#top"><span class="brand-mark">RC</span><span class="brand-name">Ranz Cuarto</span></a>
+    <div class="nav-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a class="nav-cta" href="#contact">Contact ↗</a></div>
+  </nav></header>
+  <main>
+    <section class="hero wrap" id="top">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Computer Science Student · HAU</div>
+          <h1>Hi, I’m<br><span>Ranz Cuarto.</span></h1>
+          <p class="hero-copy">I enjoy figuring out how things work, solving technical problems, and building software that people can actually use. Currently looking for an OJT opportunity in IT Support or QA Testing.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my work ↘</a><a class="btn btn-secondary" href="mailto:cuartoranz@gmail.com">Get in touch ↗</a></div>
+          <div class="scroll-line">A little about what I do</div>
+        </div>
+        <aside class="hero-note"><strong>Curious by default.</strong><p>Test carefully. Fix thoughtfully. Document what I learn.</p></aside>
+      </div>
+    </section>
+    <div class="ticker" aria-label="Areas of interest"><div class="ticker-track" id="ticker-track"><span>Troubleshooting</span><span>QA Testing</span><span>Backend Development</span><span>Databases</span><span>Continuous Learning</span><span>Troubleshooting</span><span>QA Testing</span><span>Backend Development</span><span>Databases</span><span>Continuous Learning</span></div></div>
 
-<main>
-<section id="top">
-<div class="hero-top">
-<h2 class="d roles"><span><i style="animation-delay:.3s">Troubleshoot</i></span><span><i style="animation-delay:.38s">Test</i></span><span><i style="animation-delay:.46s">Document</i></span><span><i style="animation-delay:.54s">Learn</i></span></h2>
-<p class="hero-p">BS Computer Science student at Holy Angel University, interested in troubleshooting, software quality, databases, and practical IT systems. Looking for an OJT in IT Support or QA Testing.</p>
-</div>
-<h1 class="d name" aria-label="Ranz Cuarto"><span data-l>Ranz</span><span data-l>Cuarto</span></h1>
-<div class="fade"></div>
-<div class="cue">Scroll to enter</div>
-</section>
+    <section class="section wrap" id="about"><div class="about-grid">
+      <div class="reveal"><div class="eyebrow">About & Approach</div><h2>Understand the problem before fixing it.</h2></div>
+      <div class="reveal"><p class="about-copy">Through school projects, I’ve built applications, worked with databases and backend services, and tested features against requirements. I like finding the reason something fails, checking the fix, and leaving clear notes for the next person.</p>
+        <div class="principles">
+          <div class="principle"><div class="principle-num">01</div><div><h3>Reproduce the issue</h3><p>Understand what causes a bug before trying to fix it.</p></div></div>
+          <div class="principle"><div class="principle-num">02</div><div><h3>Test the details</h3><p>Check valid inputs, edge cases, and expected behavior.</p></div></div>
+          <div class="principle"><div class="principle-num">03</div><div><h3>Keep things clear</h3><p>Document decisions, limitations, and what I contributed.</p></div></div>
+        </div>
+      </div>
+    </div></section>
 
-<section class="marquee" aria-label="Working principles"><div class="track" id="mq"></div></section>
+    <section class="section" id="projects" style="background:#f0f1eb"><div class="wrap">
+      <div class="projects-head reveal"><div><div class="eyebrow">Selected Work</div><h2>Projects I’ve worked on.</h2></div><p>A few school and personal projects where I practiced development, debugging, and testing.</p></div>
+      <div class="project-grid">
+        <article class="project reveal"><div class="project-visual"><div class="visual-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="mock-title"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-cards"><i></i><i></i><i></i></div></div><span class="visual-label">01 / Browser Extension</span></div><div class="project-body"><div class="project-meta"><span>Thesis · Group project</span><span>01</span></div><h3>PriceWatch PH</h3><p>A browser extension that tracks Shopee PH and Lazada PH prices, with alerts and 30-day price history stored on the device.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">Manifest V3</span><span class="tag">Browser APIs</span></div><p><strong>My contribution:</strong> background worker, price extraction, and popup UI.</p><div class="project-links"><a href="https://github.com/rnzcrt/Price-Tracker" target="_blank" rel="noreferrer">View source ↗</a></div></div></article>
+        <article class="project reveal"><div class="project-visual"><div class="visual-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="mock-title"></div><div class="mock-line short"></div><div class="mock-cards"><i></i><i></i><i></i></div><div class="mock-line" style="margin-top:12px"></div><div class="mock-line short"></div></div><span class="visual-label">02 / Web Application</span></div><div class="project-body"><div class="project-meta"><span>Solo · Course project</span><span>02</span></div><h3>LaundryLog</h3><p>A laundry shop management system for orders, machine loads, split payments, inventory, and reports.</p><div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span></div><p><strong>My contribution:</strong> business rules, SQL migrations, customer search UI, and feature testing.</p><div class="project-links"><a href="https://laundrylog.onrender.com" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/rnzcrt/LaundryLog" target="_blank" rel="noreferrer">Source ↗</a></div></div></article>
+        <article class="project reveal"><div class="project-visual"><div class="visual-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="mock-title"></div><div class="mock-line"></div><div class="mock-cards"><i></i><i></i><i></i></div><div class="mock-line" style="margin-top:12px"></div></div><span class="visual-label">03 / Mobile Application</span></div><div class="project-body"><div class="project-meta"><span>Group · Course project</span><span>03</span></div><h3>BudgetBlud</h3><p>A budgeting app for tracking expenses and monthly or category limits, with offline-first storage and cloud sync.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Supabase</span></div><p><strong>My contribution:</strong> frontend and backend development, features, debugging, and testing.</p><div class="project-links"><a href="https://github.com/rnzcrt/BudgetBlud" target="_blank" rel="noreferrer">View source ↗</a></div></div></article>
+        <article class="project reveal"><div class="project-visual"><div class="visual-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="mock-title"></div><div class="mock-line short"></div><div class="mock-cards"><i></i><i></i><i></i></div><div class="mock-line" style="margin-top:12px"></div></div><span class="visual-label">04 / Mobile Game</span></div><div class="project-body"><div class="project-meta"><span>Group · 6CloudCom</span><span>04</span></div><h3>HAU Pokémon</h3><p>A location-based monster-catching game connected to a backend API, with AWS EC2 status and controls.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">AWS EC2</span></div><p><strong>My contribution:</strong> frontend and backend work, EC2 setup, debugging, and feature testing.</p><div class="project-links"><a href="https://github.com/rnzcrt/hau_pokemon_app" target="_blank" rel="noreferrer">View source ↗</a></div></div></article>
+      </div>
+    </div></section>
 
-<section id="story" class="pad"><div class="grid">
-<div>
-<div class="eyebrow rv">Approach</div>
-<h2 class="d rv">Find why it breaks, then fix it.</h2>
-<p class="lead rv">Through my school projects I've built applications, worked with backend services, debugged issues, and tested functionality. I like finding out why something fails, fixing it properly, and writing down what I learned so the next person doesn't have to guess.</p>
-</div>
-<ul class="pr">
-<li class="rv"><b>01</b><div><h3>Reproduce before fixing</h3><p>I try to get a bug to happen on demand first. A fix I can't verify isn't finished.</p></div></li>
-<li class="rv" style="--dl:90ms"><b>02</b><div><h3>Test against requirements</h3><p>In LaundryLog I checked valid and invalid input, machine capacity limits, and pricing rules against what the system was supposed to do.</p></div></li>
-<li class="rv" style="--dl:180ms"><b>03</b><div><h3>Document honestly</h3><p>My READMEs state what each project does, its limits, and exactly which part I built in group work.</p></div></li>
-<li class="rv" style="--dl:270ms"><b>04</b><div><h3>Review what AI produces</h3><p>I use AI tools while building, then test the result and log where it was wrong. LaundryLog's AI usage log is public.</p></div></li>
-</ul></div></section>
+    <section class="section wrap" id="skills"><div class="skills-layout"><div class="reveal"><div class="eyebrow">Skills</div><h2>Tools I’ve used.</h2><p>I’m still learning, and I focus on being able to explain and apply the tools I list.</p></div><div class="skill-groups reveal">
+      <div class="skill-group"><h3>Programming</h3><p>JavaScript<br>Dart<br>SQL</p></div>
+      <div class="skill-group"><h3>Development</h3><p>Node.js & Express<br>Flutter<br>REST APIs</p></div>
+      <div class="skill-group"><h3>Data & Cloud</h3><p>PostgreSQL<br>Supabase<br>AWS EC2</p></div>
+      <div class="skill-group"><h3>QA & IT</h3><p>Functional testing<br>Debugging<br>Troubleshooting & documentation</p></div>
+    </div></div></section>
 
-<section id="projects" class="pad">
-<div class="head"><div><div class="eyebrow rv">Selected Projects</div><h2 class="d rv">What I've built.</h2></div><div class="small rv">04 / Projects</div></div>
-<ul class="cards">
-<li class="card rv"><a class="art" href="https://github.com/rnzcrt/Price-Tracker"><em>01</em><strong>JavaScript · Manifest V3</strong></a>
-<div class="row"><div><h3>PriceWatch PH</h3><p>A privacy-first Chrome and Edge extension that tracks Shopee PH and Lazada PH prices, with alerts, 30-day history, and all data kept on the device.</p><p class="role"><strong>My role:</strong> background worker, price extraction, and popup UI.</p></div><div class="type">Thesis · Group<div>Browser extension</div></div></div>
-<div class="links"><a href="https://github.com/rnzcrt/Price-Tracker">Source</a></div></li>
-
-<li class="card rv" style="--dl:120ms"><a class="art" href="https://laundrylog.onrender.com"><em>02</em><strong>Node.js · Express · PostgreSQL</strong></a>
-<div class="row"><div><h3>LaundryLog</h3><p>A laundry shop management system that follows an order from drop-off to pickup, with machine loads, split payments, inventory, and reports.</p><p class="role"><strong>My role:</strong> business rules, SQL migrations, customer search UI, and testing features against my requirements.</p></div><div class="type">Solo · Course<div>Live</div></div></div>
-<div class="links"><a href="https://laundrylog.onrender.com">Live demo</a><a href="https://github.com/rnzcrt/LaundryLog">Source</a><a href="https://github.com/rnzcrt/LaundryLog/blob/main/AI-USAGE.md">AI usage log</a></div></li>
-
-<li class="card rv"><a class="art" href="https://github.com/rnzcrt/BudgetBlud"><em>03</em><strong>Flutter · Dart · Supabase</strong></a>
-<div class="row"><div><h3>BudgetBlud</h3><p>A budgeting app for tracking expenses and sticking to monthly and category limits, with offline-first storage and Supabase sync.</p><p class="role"><strong>My role:</strong> about half of the frontend and backend, plus adding features, debugging, and testing.</p></div><div class="type">Group · Course<div>Mobile app</div></div></div>
-<div class="links"><a href="https://github.com/rnzcrt/BudgetBlud">Source</a></div></li>
-
-<li class="card rv" style="--dl:120ms"><a class="art" href="https://github.com/rnzcrt/hau_pokemon_app"><em>04</em><strong>Flutter · Dart · AWS EC2</strong></a>
-<div class="row"><div><h3>HAU Pokémon</h3><p>A location-based monster-catching game with a backend API and AWS EC2 status and controls.</p><p class="role"><strong>My role:</strong> about half of the frontend and backend (including AWS EC2 setup), plus adding features, debugging, and testing.</p></div><div class="type">Group · 6CloudCom<div>Mobile game</div></div></div>
-<div class="links"><a href="https://github.com/rnzcrt/hau_pokemon_app">Source</a></div></li>
-</ul></section>
-
-<section id="numbers" class="pad">
-<div class="eyebrow rv">At a glance</div><h2 class="d rv">Where I am now.</h2>
-<dl>
-<div class="rv"><dd>4</dd><dt>Projects on GitHub</dt></div>
-<div class="rv" style="--dl:110ms"><dd>1</dd><dt>Live deployed app</dt></div>
-<div class="rv" style="--dl:220ms"><dd>4</dd><dt>Certificate providers</dt></div>
-<div class="rv" style="--dl:330ms"><dd>2027</dd><dt>Expected graduation</dt></div>
-</dl>
-<div class="certs">
-<div class="rv"><h4>Cisco Networking Academy</h4>Cyber Threat Management, Endpoint Security, CCNA: Introduction to Networks, Data Analytics Essentials, JavaScript Essentials 1</div>
-<div class="rv" style="--dl:90ms"><h4>AWS Academy</h4>Graduate, Cloud Foundations (Training Badge)</div>
-<div class="rv" style="--dl:180ms"><h4>IBM SkillsBuild</h4>AI Fundamentals: Foundations; Language and Vision in AI</div>
-<div class="rv" style="--dl:270ms"><h4>freeCodeCamp</h4>JavaScript Certification; Legacy Responsive Web Design (V8); Legacy Relational Database (V8)</div>
-</div>
-<p class="note rv">I use AI tools while building and I document it. LaundryLog's <a href="https://github.com/rnzcrt/LaundryLog/blob/main/AI-USAGE.md">AI usage log</a> records what the AI did, what I did, and mistakes I caught in review.</p>
-</section>
-</main>
-
-<footer id="contact">
-<div class="eyebrow rv">Let's Talk</div>
-<h2 class="d rv">Looking for an OJT in IT Support or QA Testing.</h2>
-<p class="lead rv">If you have a team that could use someone who enjoys troubleshooting and testing, I'd like to hear from you.</p>
-<a class="mail rv" href="mailto:cuartoranz@gmail.com">cuartoranz@gmail.com <i>↗</i></a>
-<div class="bar">
-<div><p class="d">Ranz Cuarto</p><p class="small" style="margin-top:1rem">BS Computer Science · Holy Angel University</p></div>
-<ul><li><a href="https://github.com/rnzcrt" target="_blank" rel="noreferrer noopener">GitHub</a></li><li><a href="https://www.linkedin.com/in/ranz-cuarto" target="_blank" rel="noreferrer noopener">LinkedIn</a></li></ul>
-<p class="small">© 2026 Ranz Emmanuel Cuarto</p>
-</div>
-</footer>
-
-<script>
-// adaptive rem above 1920px
-(function(){var B=1920,F=16,C=.6666;function f(){var w=innerWidth,r=((B-w)/B)*100*C,s=F-F*r/100;if(s>F)document.documentElement.style.fontSize=s+"px";else document.documentElement.style.removeProperty("font-size")}f();addEventListener("resize",f)})();
-// marquee (list twice for a seamless loop)
-var W=["Troubleshoot Calmly","Test Against Requirements","Document Honestly","Keep Learning"],mq=document.getElementById("mq");
-mq.innerHTML=W.concat(W).concat(W).concat(W).map(function(w){return"<span>"+w+"</span>"}).join("");
-// hero name: letter-by-letter
-document.querySelectorAll("[data-l]").forEach(function(el,li){var t=el.textContent;el.textContent="";[].forEach.call(t,function(c,i){var b=document.createElement("b");b.textContent=c;b.style.animationDelay=(.2+li*.24+i*.052)+"s";el.appendChild(b)})});
-// scroll reveals (once)
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})});
-document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
-</script>
+    <section class="section wrap" id="education"><div class="reveal"><div class="eyebrow">Education & Learning</div><h2>Building my foundation.</h2></div><div class="education">
+      <article class="edu-card reveal"><div class="sub">2027 · Expected graduation</div><h3>Holy Angel University</h3><p>BS Computer Science</p><p>Interested in practical IT systems, software quality, and solving technical problems.</p></article>
+      <article class="edu-card reveal"><div class="sub">Selected certifications</div><h3>Learning beyond class</h3><ul class="cert-list"><li><strong>Cisco Networking Academy</strong><br>Networking, endpoint security, JavaScript, data analytics</li><li><strong>AWS Academy</strong><br>Cloud Foundations</li><li><strong>IBM SkillsBuild</strong><br>AI Fundamentals</li><li><strong>freeCodeCamp</strong><br>JavaScript, responsive web design, relational databases</li></ul></article>
+    </div></section>
+  </main>
+  <footer class="contact" id="contact"><div class="wrap"><div class="contact-grid"><div class="reveal"><div class="eyebrow">Contact</div><h2>Let’s solve something.</h2><p>I’m looking for an OJT opportunity in IT Support or QA Testing. If you think I could be a good fit for your team, I’d be glad to connect.</p></div><a class="contact-email reveal" href="mailto:cuartoranz@gmail.com">cuartoranz@gmail.com ↗</a></div><div class="footer"><span>© 2026 Ranz Emmanuel Cuarto</span><div class="footer-links"><a href="https://github.com/rnzcrt" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/ranz-cuarto" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><span>Made with curiosity.</span></div></div></footer>
+  <script>
+    const items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      }), {threshold: 0.12});
+      items.forEach(item => observer.observe(item));
+    } else { items.forEach(item => item.classList.add('visible')); }
+  </script>
 </body>
 </html>

@@ -11,6 +11,18 @@ Personal portfolio of **Ranz Emmanuel G. Cuarto**, a BS Computer Science student
 
 🔗 **Live site:** [rnzcrt.github.io](https://rnzcrt.github.io)
 
+## Screenshots
+
+<table>
+<tr>
+<td align="center"><img src="docs/screenshots/hero-desktop.png" width="420" alt="Hero section on desktop"><br><sub>Hero (desktop)</sub></td>
+<td align="center"><img src="docs/screenshots/projects-desktop.png" width="420" alt="Projects section on desktop"><br><sub>Projects (desktop)</sub></td>
+</tr>
+<tr>
+<td align="center" colspan="2"><img src="docs/screenshots/mobile.png" width="200" alt="Site on a phone"><br><sub>Mobile</sub></td>
+</tr>
+</table>
+
 ## What's on the site
 
 - **Approach:** how I work: reproduce before fixing, test against requirements, document honestly, review what AI produces
@@ -33,7 +45,8 @@ A single static page with no build step and no framework.
 
 ```
 rnzcrt.github.io/
-├── index.html    # the whole site: markup, CSS, and JavaScript
+├── index.html          # the whole site: markup, CSS, and JavaScript
+├── docs/screenshots/   # images used in this README
 └── README.md
 ```
 

@@ -33,7 +33,8 @@ Personal portfolio of **Ranz Emmanuel G. Cuarto**, a BS Computer Science student
 - **Hero:** who I am, an "open to OJT" badge, and a quick facts strip
 - **About & Approach:** how I work (reproduce before fixing, test the details, keep things clear, review what AI produces) and how I use AI
 - **Projects:** PriceWatch PH, LaundryLog, BudgetBlud, and HAU Pokémon, each with the stack, my contribution, and links
-- **Skills, Education, and Certifications**
+- **Skills and Education**, including the Cisco training modules
+- **Certifications & Badges:** all 12 credentials with issuer, date, and type, with a filter for certificates or badges
 - **Contact:** email (with a copy button), GitHub, and LinkedIn
 
 ## Features

@@ -24,7 +24,7 @@ Personal portfolio of **Ranz Emmanuel G. Cuarto**, a BS Computer Science student
 <td align="center"><img src="docs/screenshots/projects-dark.png" width="420" alt="Projects section, dark theme"><br><sub>Projects (dark)</sub></td>
 </tr>
 <tr>
-<td align="center" colspan="2"><img src="docs/screenshots/mobile.png" width="200" alt="Site on a phone"><br><sub>Mobile</sub></td>
+<td align="center" colspan="2"><img src="docs/screenshots/mobile.PNG" width="200" alt="Site on a phone"><br><sub>Mobile</sub></td>
 </tr>
 </table>
 
